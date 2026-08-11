@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36804.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotionLibrary", "ClassLibrary1\MotionLibrary.csproj", "{102A8DB4-99FD-4919-BF27-B7B5E73486CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotorTest", "MotorTest\MotorTest.csproj", "{F5BEF44B-36D2-4DF3-9EDA-D7388EA32AC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{102A8DB4-99FD-4919-BF27-B7B5E73486CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{102A8DB4-99FD-4919-BF27-B7B5E73486CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{102A8DB4-99FD-4919-BF27-B7B5E73486CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{102A8DB4-99FD-4919-BF27-B7B5E73486CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5BEF44B-36D2-4DF3-9EDA-D7388EA32AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BEF44B-36D2-4DF3-9EDA-D7388EA32AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BEF44B-36D2-4DF3-9EDA-D7388EA32AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BEF44B-36D2-4DF3-9EDA-D7388EA32AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35B74691-5DC3-4F06-AF90-6220BA423F0F}
+	EndGlobalSection
+EndGlobal
