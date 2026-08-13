@@ -53,10 +53,31 @@
     <Compile Include="Motions\01.MotionHandlers\Base\IMotionAxisHandler.cs" />
     <Compile Include="Motions\01.MotionHandlers\Base\MotionHandlerBase.cs" />
     <Compile Include="Motions\01.MotionHandlers\MotionAxisHandler.cs" />
+    <Compile Include="Motions\02.MotionConnections\Base\IMotionConnection.cs" />
     <Compile Include="Motions\02.MotionConnections\Base\MotionConnectionBase.cs" />
-    <Compile Include="Motions\02.MotionConnections\MotionConnection.cs" />
+    <Compile Include="Motions\02.MotionConnections\MotionAJINConnection.cs" />
+    <Compile Include="Motions\03.MotionMoves\Base\IMotionMoveBase.cs" />
+    <Compile Include="Motions\03.MotionMoves\Base\MotionMoveBase.cs" />
+    <Compile Include="Motions\03.MotionMoves\MotionAJINMove.cs" />
+    <Compile Include="Motions\03.MotionMoves\ParamsType\MotionSpeedParam.cs" />
+    <Compile Include="Motions\04.MotionOperations\Base\IMotionOperation.cs" />
+    <Compile Include="Motions\04.MotionOperations\Base\MotionOperationBase.cs" />
+    <Compile Include="Motions\04.MotionOperations\MotionAxisAJINOperation.cs" />
+    <Compile Include="Motions\05.MotionState\Base\IMotionStateBase.cs" />
+    <Compile Include="Motions\05.MotionState\Base\MotionStateBase.cs" />
+    <Compile Include="Motions\05.MotionState\Logic\AJIN\AxisEndStateLogic.cs" />
+    <Compile Include="Motions\05.MotionState\Logic\AJIN\DriveMotionState.cs" />
+    <Compile Include="Motions\05.MotionState\Logic\AJIN\MechanicalStateLogic.cs" />
+    <Compile Include="Motions\05.MotionState\Logic\DataTypes\MotionStatus.cs" />
+    <Compile Include="Motions\05.MotionState\Logic\Factorys\MotionStateFactory.cs" />
+    <Compile Include="Motions\05.MotionState\Logic\IMotionAxisStateLogic.cs" />
+    <Compile Include="Motions\05.MotionState\MotionAJINState.cs" />
+    <Compile Include="Motions\98.MotorAxes\Base\MotionAxisBase.cs" />
+    <Compile Include="Motions\98.MotorAxes\MotionAxis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Motions\99.MotorContext\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

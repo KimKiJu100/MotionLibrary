@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MotorTest
 {
     public partial class Form1 : Form
@@ -15,6 +16,16 @@ namespace MotorTest
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Helper.Create();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Helper.Test();
         }
     }
 }
