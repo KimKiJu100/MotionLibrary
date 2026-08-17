@@ -12,5 +12,9 @@ namespace ClassLibrary1.Motions._98.MotorControls.Base
     /// </summary>
     public abstract class MotionControlBase
     {
+        public virtual bool ConnectionMotionDevice()
+        {
+            throw new Exception("구현부에 Connection을 오버라이딩 하지 않았습니다. 확인하세요.");
+        }
     }
 }
