@@ -11,6 +11,11 @@ namespace ClassLibrary1.Motions._02.MotionConnections
     public class MotionAJINConnection : MotionConnectionBase, IMotionConnection
     {
         private readonly IMotionAxisHandler _handler = null;
+
+        public MotionAJINConnection()
+        {       
+        }
+
         public MotionAJINConnection(IMotionAxisHandler handler)
         {
             _handler = handler;

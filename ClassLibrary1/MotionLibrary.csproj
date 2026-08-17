@@ -72,12 +72,16 @@
     <Compile Include="Motions\05.MotionState\Logic\Factorys\MotionStateFactory.cs" />
     <Compile Include="Motions\05.MotionState\Logic\IMotionAxisStateLogic.cs" />
     <Compile Include="Motions\05.MotionState\MotionAJINState.cs" />
-    <Compile Include="Motions\98.MotorAxes\Base\MotionAxisBase.cs" />
-    <Compile Include="Motions\98.MotorAxes\MotionAxis.cs" />
+    <Compile Include="Motions\97.MotorAxes\Base\MotionAxisBase.cs" />
+    <Compile Include="Motions\97.MotorAxes\Factorys\Params\AJINAxisParam.cs" />
+    <Compile Include="Motions\97.MotorAxes\Factorys\Params\Base\AxisParamBase.cs" />
+    <Compile Include="Motions\97.MotorAxes\MotionAxis.cs" />
+    <Compile Include="Motions\97.MotorAxes\Factorys\MotionAxisPartFactory.cs" />
+    <Compile Include="Motions\98.MotorControls\Base\MotionControlBase.cs" />
+    <Compile Include="Motions\98.MotorControls\MotionAjinControl.cs" />
+    <Compile Include="Motions\99.MotionContext\MotionContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Motions\99.MotorContext\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
