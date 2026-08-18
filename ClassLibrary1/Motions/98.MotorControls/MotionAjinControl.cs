@@ -30,7 +30,5 @@ namespace ClassLibrary1.Motions._98.MotorControls
         {
             return _motionConnection.Connect();
         }
-
-
     }
 }

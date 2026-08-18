@@ -77,7 +77,7 @@ namespace MotorTest
 
         private string GetDeviceKey(string Device, int HandlerNumber)
         {
-            return $"{Device} + _ +  {HandlerNumber.ToString()}";
+            return $"{Device}" + '_' +  $"{HandlerNumber}";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -88,22 +88,26 @@ namespace MotorTest
 
         private void TestMonitoring(CancellationToken token)
         {
+            var key = GetDeviceKey("AJIN_Control1", 0);
             var control = _context.GetMotionControls("Test");
 
             while (!token.IsCancellationRequested)
             {
-                var v = control["test"]?.GetState(StateMode.AJIN_DriveMechanical);
-                var v1 = control["test"]?.GetState(StateMode.AJIN_ENDLogic);
-                var v2 = control["test"]?.GetState(StateMode.AJIN_DriveMode);
+                var v = control[key]?.GetState(StateMode.AJIN_DriveMechanical);
+                var v1 = control[key]?.GetState(StateMode.AJIN_ENDLogic);
+                var v2 = control[key]?.GetState(StateMode.AJIN_DriveMode);
             }
         }
 
         private void cbb_MotionState_CheckStateChanged(object sender, EventArgs e)
         {
             var state= ((CheckBox)sender).Checked;
-
             if (state)
+            {
+                cts = new CancellationTokenSource();
                 Task.Run(() => { TestMonitoring(cts.Token); });
+            }
+                
             else
                 cts.Cancel();
         }
