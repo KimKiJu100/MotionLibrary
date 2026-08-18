@@ -93,9 +93,29 @@ namespace MotorTest
 
             while (!token.IsCancellationRequested)
             {
-                var v = control[key]?.GetState(StateMode.AJIN_DriveMechanical);
-                var v1 = control[key]?.GetState(StateMode.AJIN_ENDLogic);
-                var v2 = control[key]?.GetState(StateMode.AJIN_DriveMode);
+                var v = control[key]?.GetState(StateMode.AJIN_DriveMechanical).Values.ToList();
+                var v1 = control[key]?.GetState(StateMode.AJIN_ENDLogic).Values.ToList();
+                var v2 = control[key]?.GetState(StateMode.AJIN_DriveMode).Values.ToList();
+                Invoke((Action)(() =>
+                {
+                    for (int i = 0; i < v.Count; i++)
+                    {
+                        Mechanical_LabelCollection[i].BackColor =
+                            v[i] ? Color.Green : Color.Red;
+                    }
+
+                    for (int i = 0; i < v1.Count; i++)
+                    {
+                        Mechanical_LabelCollection[i].BackColor =
+                            v1[i] ? Color.Green : Color.Red;
+                    }
+
+                    for (int i = 0; i < v2.Count; i++)
+                    {
+                        Mechanical_LabelCollection[i].BackColor =
+                            v2[i] ? Color.Green : Color.Red;
+                    }
+                }));
             }
         }
 
