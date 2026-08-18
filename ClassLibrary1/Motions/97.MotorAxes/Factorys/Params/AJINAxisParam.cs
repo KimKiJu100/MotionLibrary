@@ -9,6 +9,7 @@ namespace ClassLibrary1.Motions._98.MotorAxes.Factorys.Params
 {
     public class AJINAxisParam : AxisParamBase
     {
+        public string DeviceName { get; set; } = string.Empty;
         public int iAxisHandler { get; set; } = 0;
     }
 }

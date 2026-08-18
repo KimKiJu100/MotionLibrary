@@ -16,7 +16,10 @@ namespace MotorTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
+
+            var bootstrapper = new AppBootstrapper();
+            bootstrapper.Run();
         }
     }
 }

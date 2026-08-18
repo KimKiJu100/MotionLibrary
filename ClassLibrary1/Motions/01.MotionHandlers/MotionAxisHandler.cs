@@ -15,7 +15,7 @@ namespace ClassLibrary1.Motions.MotionHandler
         public int AxisIndex { get; set; }
         public MotionAxisHandler()
         {
-                
+
         }
     }
 }

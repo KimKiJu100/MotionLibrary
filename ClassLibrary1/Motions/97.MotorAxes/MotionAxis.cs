@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -18,14 +19,20 @@ namespace ClassLibrary1.Motions._98.MotorAxes
 {
     public class MotionAxis
     {
+        public string DeviceName { get; } = string.Empty;
+        public int AxisNumber { get=> _handler.AxisIndex; }
+
         private readonly IMotionAxisHandler _handler;
         private readonly IMotionMoveBase _move;
         private readonly IMotionOperation _operation;
         private readonly Dictionary<StateMode, IMotionAxisStateLogic> _stateStrategies = new Dictionary<StateMode, IMotionAxisStateLogic>();
-        public MotionAxis(IMotionAxisHandler handler,
+
+        public MotionAxis(string deviceName,
+                            IMotionAxisHandler handler,
                             IMotionMoveBase move,
                             IMotionOperation operation)
         {
+            DeviceName = deviceName;
             _handler = handler;
             _move = move;
             _operation = operation;

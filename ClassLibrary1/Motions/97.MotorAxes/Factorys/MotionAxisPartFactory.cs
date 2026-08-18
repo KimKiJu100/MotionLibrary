@@ -17,7 +17,7 @@ namespace ClassLibrary1.Motions._98.MotorAxes
 {
     public class MotionAxisPartFactory
     {
-        private MotionAxis CreateAxis(AxisParamBase param)
+        public MotionAxis CreateAxis(AxisParamBase param)
         {
             switch (param)
             {
@@ -25,7 +25,7 @@ namespace ClassLibrary1.Motions._98.MotorAxes
                     IMotionAxisHandler handle = new MotionAxisHandler() { AxisIndex = ajinParam.iAxisHandler };
                     IMotionMoveBase move = new MotionAJINMove(handle) ;
                     IMotionOperation oper = new MotionAxisAJINOperation(handle);
-                    return new MotionAxis(handle, move, oper);
+                    return new MotionAxis(ajinParam.DeviceName, handle, move, oper);
 
                 default:
                     throw new NotSupportedException($"지원하지 않는 AxisParam 타입입니다. {param.GetType().Name}");

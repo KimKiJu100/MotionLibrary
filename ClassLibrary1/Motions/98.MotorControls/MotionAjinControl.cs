@@ -13,14 +13,14 @@ namespace ClassLibrary1.Motions._98.MotorControls
     public class MotionAjinControl : MotionControlBase
     {
         private readonly IMotionConnection _motionConnection = new MotionAJINConnection();
-        Dictionary<string, MotionAxis> motionAxes = new Dictionary<string, MotionAxis>();
+
         public MotionAjinControl()
         {
                 
         }
         public MotionAxis GetMotionAxis(string keyName)
         {
-            if (motionAxes.TryGetValue(keyName, out var Axis))
+            if (base.motionAxes.TryGetValue(keyName, out var Axis))
                 return Axis;
             else
                 throw new Exception("해당 Control에는 존재하는 Axis가 없습니다.");
@@ -30,5 +30,7 @@ namespace ClassLibrary1.Motions._98.MotorControls
         {
             return _motionConnection.Connect();
         }
+
+
     }
 }
