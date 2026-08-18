@@ -101,19 +101,19 @@ namespace MotorTest
                     for (int i = 0; i < v.Count; i++)
                     {
                         Mechanical_LabelCollection[i].BackColor =
-                            v[i] ? Color.Green : Color.Red;
+                            v[i] ? Color.LightGreen : Color.White;
                     }
 
                     for (int i = 0; i < v1.Count; i++)
                     {
-                        Mechanical_LabelCollection[i].BackColor =
-                            v1[i] ? Color.Green : Color.Red;
+                        MotionEnd_LabelCollection[i].BackColor =
+                            v1[i] ? Color.LightGreen : Color.White;
                     }
 
                     for (int i = 0; i < v2.Count; i++)
                     {
-                        Mechanical_LabelCollection[i].BackColor =
-                            v2[i] ? Color.Green : Color.Red;
+                        MotionDrive_LabelCollection[i].BackColor =
+                            v2[i] ? Color.LightGreen : Color.White;
                     }
                 }));
             }
