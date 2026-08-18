@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace MotorTest
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
 
+            NativeDllLoader.Initialize();
             var bootstrapper = new AppBootstrapper();
             bootstrapper.Run();
         }

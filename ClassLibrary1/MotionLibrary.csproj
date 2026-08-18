@@ -80,7 +80,26 @@
     <Compile Include="Motions\98.MotorControls\Base\MotionControlBase.cs" />
     <Compile Include="Motions\98.MotorControls\MotionAjinControl.cs" />
     <Compile Include="Motions\99.MotionContext\MotionContext.cs" />
+    <Compile Include="NativeDllLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\lib\bit32\AXL.dll">
+      <Link>x86\AXL.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\lib\bit32\EzBasicAxl.dll">
+      <Link>x86\EzBasicAxl.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\lib\bit64\AXL.dll">
+      <Link>x64\AXL.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\lib\bit64\EzBasicAxl.dll">
+      <Link>x64\EzBasicAxl.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
