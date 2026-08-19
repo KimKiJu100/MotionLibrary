@@ -93,9 +93,12 @@ namespace MotorTest
 
             while (!token.IsCancellationRequested)
             {
-                var v = control[key]?.GetState(StateMode.AJIN_DriveMechanical).Values.ToList();
-                var v1 = control[key]?.GetState(StateMode.AJIN_ENDLogic).Values.ToList();
-                var v2 = control[key]?.GetState(StateMode.AJIN_DriveMode).Values.ToList();
+                var state = control[key]?.GetState(StateMode.AJIN_DriveMechanical);
+                var state1 = control[key]?.GetState(StateMode.AJIN_ENDLogic);
+                var state2 = control[key]?.GetState(StateMode.AJIN_DriveMode);
+
+                //state캐스팅 필요.
+
                 Invoke((Action)(() =>
                 {
                     for (int i = 0; i < v.Count; i++)

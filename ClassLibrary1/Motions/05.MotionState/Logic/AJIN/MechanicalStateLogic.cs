@@ -1,5 +1,6 @@
 ﻿using ClassLibrary1.Motions._01.MotionHandlers.Base;
 using ClassLibrary1.Motions._05.MotionState.Logic.DataTypes;
+using ClassLibrary1.Motions._05.MotionState.Logic.DataTypes.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,7 +49,7 @@ namespace ClassLibrary1.Motions._05.MotionState.Logic.AJIN
             this._handler = handler;
         }
 
-        public MotionStatus GetState()
+        public MotionStatusBase GetState()
         {
             MotionStatus result = new MotionStatus();
             int iIndex = 0, iCheck = 0;

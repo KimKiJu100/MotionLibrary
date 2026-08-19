@@ -66,8 +66,10 @@
     <Compile Include="Motions\05.MotionState\Base\IMotionStateBase.cs" />
     <Compile Include="Motions\05.MotionState\Base\MotionStateBase.cs" />
     <Compile Include="Motions\05.MotionState\Logic\AJIN\AxisEndStateLogic.cs" />
+    <Compile Include="Motions\05.MotionState\Logic\AJIN\AxisStateLogic.cs" />
     <Compile Include="Motions\05.MotionState\Logic\AJIN\DriveMotionState.cs" />
     <Compile Include="Motions\05.MotionState\Logic\AJIN\MechanicalStateLogic.cs" />
+    <Compile Include="Motions\05.MotionState\Logic\DataTypes\Base\MotionStatusBase.cs" />
     <Compile Include="Motions\05.MotionState\Logic\DataTypes\MotionStatus.cs" />
     <Compile Include="Motions\05.MotionState\Logic\Factorys\MotionStateFactory.cs" />
     <Compile Include="Motions\05.MotionState\Logic\IMotionAxisStateLogic.cs" />

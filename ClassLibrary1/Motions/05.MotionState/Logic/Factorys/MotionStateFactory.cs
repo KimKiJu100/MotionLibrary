@@ -13,6 +13,7 @@ namespace ClassLibrary1.Motions._05.MotionState.Logic.Factorys
         AJIN_ENDLogic = 0,
         AJIN_DriveMode= 1,
         AJIN_DriveMechanical = 2,
+        AJIN_Drive = 2,
     }
     public class MotionStateFactory
     {

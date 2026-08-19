@@ -36,5 +36,14 @@ namespace ClassLibrary1.Motions._04.MotionOperations
             else
                 return false;
         }
+
+        //인터페이스 추가해야됨.
+        public bool CommandPositionClear()
+        {
+            if (CAXM.AxmStatusSetPosMatch(_handler.AxisIndex, 0.0) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+                return true;
+            else
+                return false;
+        }
     }
 }

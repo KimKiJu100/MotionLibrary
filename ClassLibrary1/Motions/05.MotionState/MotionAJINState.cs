@@ -2,6 +2,7 @@
 using ClassLibrary1.Motions._05.MotionState.Base;
 using ClassLibrary1.Motions._05.MotionState.Logic;
 using ClassLibrary1.Motions._05.MotionState.Logic.DataTypes;
+using ClassLibrary1.Motions._05.MotionState.Logic.DataTypes.Base;
 using ClassLibrary1.Motions._05.MotionState.Logic.Factorys;
 using System;
 using System.Collections;
@@ -25,7 +26,7 @@ namespace ClassLibrary1.Motions._05.MotionState
             _handler = handler;
         }
 
-        public MotionStatus GetState(IMotionAxisStateLogic logic)
+        public MotionStatusBase GetState(IMotionAxisStateLogic logic)
         {
             return logic.GetState();
         }

@@ -5,6 +5,7 @@ using ClassLibrary1.Motions._04.MotionOperations.Base;
 using ClassLibrary1.Motions._05.MotionState.Base;
 using ClassLibrary1.Motions._05.MotionState.Logic;
 using ClassLibrary1.Motions._05.MotionState.Logic.DataTypes;
+using ClassLibrary1.Motions._05.MotionState.Logic.DataTypes.Base;
 using ClassLibrary1.Motions._05.MotionState.Logic.Factorys;
 using System;
 using System.Collections.Generic;
@@ -54,7 +55,7 @@ namespace ClassLibrary1.Motions._98.MotorAxes
                 return false;
             }
         }
-        public MotionStatus GetState(StateMode statusMode)
+        public MotionStatusBase GetState(StateMode statusMode)
         {
             if (!_stateStrategies.TryGetValue(statusMode, out var strategy))
             {
