@@ -1,6 +1,7 @@
 ﻿using ClassLibrary1.Motions._01.MotionHandlers.Base;
 using ClassLibrary1.Motions._02.MotionConnections.Base;
 using ClassLibrary1.Motions._03.MotionMoves.Base;
+using ClassLibrary1.Motions._03.MotionMoves.ParamsType;
 using ClassLibrary1.Motions._04.MotionOperations.Base;
 using ClassLibrary1.Motions._05.MotionState.Base;
 using ClassLibrary1.Motions._05.MotionState.Logic;
@@ -66,6 +67,16 @@ namespace ClassLibrary1.Motions._98.MotorAxes
             }
 
             return strategy.GetState();
+        }
+
+        public void JogSpeedSet(MotionSpeedParam speedParams)
+        {
+            _move.SetJogParam(speedParams);
+        }
+
+        public void JogPluse()
+        {
+            _move.JogMove();
         }
     }
 }

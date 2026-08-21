@@ -150,5 +150,15 @@ namespace MotorTest
             else
                 cts.Cancel();
         }
+
+        private void button2_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void button2_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
