@@ -13,7 +13,7 @@ namespace ClassLibrary1.Motions._05.MotionState.Logic.Factorys
         AJIN_ENDLogic = 0,
         AJIN_DriveMode= 1,
         AJIN_DriveMechanical = 2,
-        AJIN_Drive = 2,
+        AJIN_AxisMoveInfor = 3,
     }
     public class MotionStateFactory
     {
@@ -27,6 +27,8 @@ namespace ClassLibrary1.Motions._05.MotionState.Logic.Factorys
                     return new DriveMotionState(handler);
                 case StateMode.AJIN_ENDLogic:
                     return new AxisEndStateLogic(handler);
+                case StateMode.AJIN_AxisMoveInfor:
+                    return new AxisStateLogic(handler);
                 default:
                     throw new Exception("Type 정의 NG.");
             }

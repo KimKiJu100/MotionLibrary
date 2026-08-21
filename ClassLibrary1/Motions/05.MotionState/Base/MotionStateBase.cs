@@ -8,5 +8,6 @@ namespace ClassLibrary1.Motions._05.MotionState.Base
 {
     public abstract class MotionStateBase
     {
+        
     }
 }

@@ -1,6 +1,8 @@
-﻿using ClassLibrary1.Motions._05.MotionState.Logic.Factorys;
+﻿using ClassLibrary1.Motions._05.MotionState.Logic.DataTypes;
+using ClassLibrary1.Motions._05.MotionState.Logic.Factorys;
 using ClassLibrary1.Motions._98.MotorAxes;
 using ClassLibrary1.Motions._98.MotorAxes.Factorys.Params;
+using ClassLibrary1.Motions._05.MotionState.Logic.DataTypes.Base;
 using ClassLibrary1.Motions._98.MotorAxes.Factorys.Params.Base;
 using ClassLibrary1.Motions._98.MotorControls;
 using ClassLibrary1.Motions._99.MotionContext;
@@ -28,6 +30,7 @@ namespace MotorTest
         private List<Label> Mechanical_LabelCollection;
         private List<Label> MotionEnd_LabelCollection ;
         private List<Label> MotionDrive_LabelCollection;
+        private List<TextBox> MotionAxis_textBoxCollection;
         private CancellationTokenSource cts;
 
         public Form1()
@@ -73,6 +76,11 @@ namespace MotorTest
             lbl_Drive_04, lbl_Drive_05, lbl_Drive_06, lbl_Drive_07,
             lbl_Drive_08, lbl_Drive_09, lbl_Drive_10, lbl_Drive_11,
             lbl_Drive_12, lbl_Drive_13, lbl_Drive_14, lbl_Drive_15 };
+
+            MotionAxis_textBoxCollection = new List<TextBox>()
+            {
+                txtbox_1,txtbox_2,txtbox_3,
+            };
         }
 
         private string GetDeviceKey(string Device, int HandlerNumber)
@@ -96,8 +104,12 @@ namespace MotorTest
                 var state = control[key]?.GetState(StateMode.AJIN_DriveMechanical);
                 var state1 = control[key]?.GetState(StateMode.AJIN_ENDLogic);
                 var state2 = control[key]?.GetState(StateMode.AJIN_DriveMode);
+                var state3 = control[key]?.GetState(StateMode.AJIN_AxisMoveInfor);
 
-                //state캐스팅 필요.
+                var v = state.Cast<MotionStatus>().Values.ToList();
+                var v1 = state.Cast<MotionStatus>().Values.ToList();
+                var v2 = state.Cast<MotionStatus>().Values.ToList();
+                var v3 = state.Cast<MotionStatus<double>>().Values.ToList();
 
                 Invoke((Action)(() =>
                 {
@@ -117,6 +129,10 @@ namespace MotorTest
                     {
                         MotionDrive_LabelCollection[i].BackColor =
                             v2[i] ? Color.LightGreen : Color.White;
+                    }
+                    for (int i = 0; i < v3.Count; i++)
+                    {
+                        MotionAxis_textBoxCollection[i].Text =  v3[i].ToString();
                     }
                 }));
             }
