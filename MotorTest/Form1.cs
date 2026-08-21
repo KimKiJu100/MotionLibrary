@@ -107,9 +107,9 @@ namespace MotorTest
                 var state3 = control[key]?.GetState(StateMode.AJIN_AxisMoveInfor);
 
                 var v = state.Cast<MotionStatus>().Values.ToList();
-                var v1 = state.Cast<MotionStatus>().Values.ToList();
-                var v2 = state.Cast<MotionStatus>().Values.ToList();
-                var v3 = state.Cast<MotionStatus<double>>().Values.ToList();
+                var v1 = state1.Cast<MotionStatus>().Values.ToList();
+                var v2 = state2.Cast<MotionStatus>().Values.ToList();
+                var v3 = state3.Cast<MotionStatus<double>>().Values.ToList();
 
                 Invoke((Action)(() =>
                 {
